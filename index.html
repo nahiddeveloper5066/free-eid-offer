@@ -478,13 +478,18 @@ input[type=number]{-moz-appearance:textfield}
                C336.906,296.467,333.91,288.535,327.115,286.582z" /> 
           </g>
          </svg> WhatsApp </button>
-       <a href="https://www.facebook.com/dialog/send?link=https://free-eid-offer.vercel.app&app_id=145634995501895&redirect_uri=https://free-eid-offer.vercel.app"
-   target="_blank"
-   id="messenger"
-   class="quedate__cta-btn2 js-hidden"
-   style="display: flex; align-items: center; justify-content: center; text-decoration: none; color: white;">
-   <img src="https://i.imghippo.com/files/PMyB7281lck.jpg" width="30px" style="margin-right: 10px;"> Share on Messenger
-       </a>
+       <button id="messenger-btn" class="quedate__cta-btn2">
+  <img src="https://i.imghippo.com/files/PMyB7281lck.jpg" width="30px" style="margin-right: 5px;">Messenger
+</button>
+
+<script>
+  const siteURL = "https://free-eid-offer.vercel.app/";
+
+  document.getElementById("messenger-btn").addEventListener("click", function () {
+    const messengerShareURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(siteURL);
+    window.open(messengerShareURL, "_blank");
+  });
+</script>
        </span>
       </div> 
      </div> 
